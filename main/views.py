@@ -22,5 +22,5 @@ class TagView(APIView):
 
     def get(self, request, pk):
         tag = get_object_or_404(TagModel, id=pk)
-        serializer = EquipmentByTagSerializer(tag)
+        serializer = EquipmentByTagSerializer(tag, context={"request": request})
         return Response(serializer.data)
