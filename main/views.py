@@ -8,7 +8,7 @@ from django.shortcuts import get_object_or_404
 class TagsListView(APIView):
     def get(self, request):
         tags = TagModel.objects.all()
-        serializer = TagListSerializer(tags, many=True)
+        serializer = TagListSerializer(tags, many=True, context={"request": request})
         return Response(serializer.data)
 
     def post(self, request):

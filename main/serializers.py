@@ -25,4 +25,5 @@ class EquipmentByTagSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TagModel
-        fields = ("id", "ru_title", "en_title", "equipments")
+        fields = "__all__"
+        depth = 1
