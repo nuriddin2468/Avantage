@@ -137,12 +137,12 @@ STATIC_ROOT  =   os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = [
+    "https://modest-bhabha-038ffd.netlify.app",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8080",
     "http://localhost:8000",
     "http://localhost:8080",
     "https://avantage.herokuapp.com",
-    "https://modest-bhabha-038ffd.netlify.app"
 ]
 
 REST_FRAMEWORK = {
