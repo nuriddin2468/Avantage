@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from main.serializers import TagListSerializer, EquipmentByTagSerializer
-from main.models import TagModel
+from main.serializers import TagListSerializer, EquipmentByTagSerializer, FullPageSerializer
+from main.models import TagModel, FullPageModel
 from django.shortcuts import get_object_or_404
 
 
@@ -23,4 +23,12 @@ class TagView(APIView):
     def get(self, request, pk):
         tag = get_object_or_404(TagModel, id=pk)
         serializer = EquipmentByTagSerializer(tag, context={"request": request})
+        return Response(serializer.data)
+
+
+class FullPageView(APIView):
+
+    def get(self, request):
+        page = get_object_or_404(FullPageModel, id=1)
+        serializer = FullPageSerializer(page, context={"request": request})
         return Response(serializer.data)
