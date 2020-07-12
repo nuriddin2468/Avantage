@@ -3,6 +3,8 @@ from rest_framework.response import Response
 from main.serializers import TagListSerializer, EquipmentByTagSerializer, FullPageSerializer
 from main.models import TagModel, FullPageModel
 from django.shortcuts import get_object_or_404
+from django.views import View
+from django.http import JsonResponse
 
 
 class TagsListView(APIView):
@@ -32,3 +34,8 @@ class FullPageView(APIView):
         page = get_object_or_404(FullPageModel, id=1)
         serializer = FullPageSerializer(page, context={"request": request})
         return Response(serializer.data)
+
+class TelegramView(View):
+
+    def post(self, request):
+        return JsonResponse({'error': 0})
