@@ -146,6 +146,7 @@ CORS_ORIGIN_WHITELIST = [
     "http://localhost:8000",
     "http://localhost:8080",
     "https://avantage.herokuapp.com",
+    "https://avantage.events/",
 ]
 
 REST_FRAMEWORK = {
