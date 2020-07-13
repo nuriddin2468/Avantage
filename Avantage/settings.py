@@ -143,10 +143,12 @@ CORS_ORIGIN_WHITELIST = [
     "https://modest-bhabha-038ffd.netlify.app",
     "http://127.0.0.1:8000",
     "http://127.0.0.1:8080",
+    "http://127.0.0.1:8081",
     "http://localhost:8000",
+    "http://localhost:8001",
     "http://localhost:8080",
     "https://avantage.herokuapp.com",
-    "https://avantage.events/",
+    "https://avantage.events",
 ]
 
 REST_FRAMEWORK = {

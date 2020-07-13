@@ -5,7 +5,7 @@ from main.models import TagModel, FullPageModel
 from django.shortcuts import get_object_or_404
 from django.views import View
 from django.http import JsonResponse
-
+from django.views.decorators.csrf import csrf_exempt
 
 class TagsListView(APIView):
     def get(self, request):
@@ -35,7 +35,6 @@ class FullPageView(APIView):
         serializer = FullPageSerializer(page, context={"request": request})
         return Response(serializer.data)
 
-class TelegramView(View):
-
-    def post(self, request):
-        return JsonResponse({'error': 0})
+@csrf_exempt
+def TelegramView(request):
+    return JsonResponse({'error': 0})
