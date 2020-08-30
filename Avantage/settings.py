@@ -24,7 +24,7 @@ SECRET_KEY = 'vou5r$)uyp)^kn@2km*ahh+s4w-r=slnsoj#&3i!53ok95#koa'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['avantage.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['avantage.herokuapp.com', '127.0.0.1', 'roadtosenior.uz']
 
 # Application definition
 
@@ -75,16 +75,28 @@ WSGI_APPLICATION = 'Avantage.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
+#
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'd3vtruns4d4okc',
+#         'USER': 'dihqtlnywonifb',
+#         'PASSWORD': 'b1026c19ba7d887f129616ee49045047935721a7572488bbdb9a3d0b9e26f2a1',
+#         'HOST': 'ec2-54-217-204-34.eu-west-1.compute.amazonaws.com',
+#         'PORT': '5432',
+# }
+# }
+
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd3vtruns4d4okc',
-        'USER': 'dihqtlnywonifb',
-        'PASSWORD': 'b1026c19ba7d887f129616ee49045047935721a7572488bbdb9a3d0b9e26f2a1',
-        'HOST': 'ec2-54-217-204-34.eu-west-1.compute.amazonaws.com',
-        'PORT': '5432',
-}
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'nuriddnp_avantag',
+        'USER': 'nuriddnp_avantag',
+        'PASSWORD': 'Qwerty123321',
+        'HOST': 'nuriddnp.beget.tech',   # Or an IP Address that your DB is hosted on
+        'PORT': '3306',
+    }
 }
 
 
